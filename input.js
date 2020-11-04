@@ -1,3 +1,5 @@
+const { moveUp, moveLeft, moveDown, moveRight, messageOne, messageTwo} = require('./constants');
+let connection;
 /**
  * Setup User Interface 
  * Specifically, so that we can handle user input via stdin
@@ -8,9 +10,24 @@ const handleUserInput = (data) => {
     console.log('See you later!');
     process.exit()
     }
+  if (data === 'w'){
+    connection.write(moveUp)
+  }  
+
+  if (data === 'a'){
+    connection.write(moveLeft)
+  }
+  if (data === 's'){
+    connection.write(moveDown)
+  }
+  if (data === 'd') {
+    connection.write(moveRight)
+  }
+  
 }
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');

@@ -3,8 +3,8 @@ const { setupInput } = require('./input')
 
 
 console.log('Connecting ...');
-connect();
-setupInput();
+
+setupInput(connect());
 
 // const handleUserInput = (data) => {
 //   if (data === '\u0003') {
