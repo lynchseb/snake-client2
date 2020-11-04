@@ -13,7 +13,6 @@ const handleUserInput = (data) => {
   if (data === 'w'){
     connection.write(moveUp)
   }  
-
   if (data === 'a'){
     connection.write(moveLeft)
   }
@@ -23,7 +22,13 @@ const handleUserInput = (data) => {
   if (data === 'd') {
     connection.write(moveRight)
   }
-  
+  if (data === 'q') {
+    connection.write(messageOne)
+  }
+  if (data === 'e') {
+    connection.write(messageTwo)
+  }
+
 }
 
 const setupInput = function(conn) {

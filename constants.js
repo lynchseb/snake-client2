@@ -1,6 +1,5 @@
-const IP = '172.46.0.236';
-const PORT = 50541; 
-
+const IP = '135.23.222.131';
+const PORT = 50542; 
 
 const moveUp = "Move: up";
 const moveLeft = "Move: left";
